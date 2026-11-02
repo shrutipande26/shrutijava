@@ -1,0 +1,33 @@
+import java.util.LinkedList;
+public class LLdemo
+{
+    public static void main(String args[])
+    {
+        LinkedList<String> students = new LinkedList<>();
+        students.add("ABC");
+        students.add("PQR");
+        students.add("XYZ");
+        System.out.print("Original linked list:" + students);
+        students.addFirst("LMN");
+        System.out.println("After adding first :" + students);
+        students.addLast("JKL");
+        System.out.println("After adding last:" + students);
+        students.remove("LMN");
+        System.out.println("After removing" + students);
+        if (students.contains("PQR"))
+        {
+            System.out.println(name + " is present");
+        }
+        else
+        {
+            System.out.println(name + " is not present");
+        }
+        System.out.println("First student :" + students.getFirst());
+        System.out.println("Last student :" + students.getLast());
+        System.out.println("Total students:" + students.size());
+        for (String name : students)
+        {
+            System.out.println(name);
+        }
+    }
+}
