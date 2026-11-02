@@ -1,0 +1,34 @@
+import java.util.*;
+class myException extends Exception
+{
+    myException(String s)
+    {
+        super(s);
+    }
+}
+
+public class Age
+{
+    public static void main(String[] args)
+    {
+        Scanner sc = new Scanner(System.in);
+        try
+        {
+            System.out.println("Enter your age:");
+            int age = sc.nextInt();
+            if (age < 0)
+            {
+                throw new myException("Invalid age");
+            }
+            System.out.println("Valid age");
+        }
+        catch (myException e)
+        {
+            System.out.println("Error:" + e.getmessage());
+        }
+        finally
+        {
+            sc.close();
+        }
+    }
+}
