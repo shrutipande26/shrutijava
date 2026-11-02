@@ -1,0 +1,32 @@
+import java.util.function.*;
+@FunctionalInterface
+interface MyInterface
+{
+    void display();
+}
+
+public class FunctionalDemoAll
+{
+    public static void main(String[] args)
+    {
+        //custom functional Interface
+        MyInterface obj = () -> System.out.println("Hello all");
+        obj.display();
+
+        //consumer
+        Consumer<String> c = x -> System.out.println(x);
+        c.accept("Hello");
+
+        //predicate
+        Predicate<Integer> p = x -> x > 10;
+        System.out.println(p.test(20));
+
+        //function
+        Function<Integer, Integer> f = x -> x * x;
+        System.out.println(f.apply(5));
+
+        //supplier
+        Supplier<String> s = () -> "Java";
+        System.out.println(s.get());
+    }
+}
