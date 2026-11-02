@@ -1,0 +1,21 @@
+import java.util.HashSet;
+public class HashSetExample
+{
+    public static void main(String args[])
+    {
+        HashSet<String> s = new HashSet<>();
+        s.add("ABC");
+        s.add("XYZ");
+        s.add("PQR");
+        s.add("LMN");
+        System.out.println("Elements:" + s);
+        s.add("ABC");
+        s.remove("XYZ");
+        System.out.println("After removing xyz" + s);
+        System.out.println("Total:" + s.size());
+        if (s.contains("LMN"))
+            System.out.println("present");
+        else
+            System.out.println("Absent");
+    }
+}
