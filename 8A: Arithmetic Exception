@@ -1,0 +1,22 @@
+public class Main
+{
+    public static void main(String args[])
+    {
+        int value = 10;
+        int answer = 0;
+        try
+        {
+            answer = value / 0;
+            System.out.println("Answer:" + Answer);
+        }
+        catch (ArithmeticException ex)
+        {
+            System.out.println("Error: division by 0 not possible.");
+            System.out.println("Details :" + ex.getmessage());
+        }
+        finally
+        {
+            System.out.println("Execution completed.");
+        }
+    }
+}
