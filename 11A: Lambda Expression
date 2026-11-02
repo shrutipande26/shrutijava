@@ -1,0 +1,32 @@
+@FunctionalInterface
+interface MyFI1
+{
+    void show();
+}
+
+@FunctionalInterface
+interface MyFI2
+{
+    void display(int a);
+}
+
+@FunctionalInterface
+interface MyFI3
+{
+    void display(int b, int c);
+}
+
+public class LambdaExpression
+{
+    public static void main(String args[])
+    {
+        MyFI1 obj1 = () -> System.out.println("No parameter is passed.");
+        obj1.show();
+
+        MyFI2 obj2 = (a) -> System.out.println("one parameter is passed (square):" + a*a);
+        obj2.display(6);
+
+        MyFI3 obj3 = (b,c) -> System.out.println("Multiple parameters are passed (sum):" + (b+c));
+        obj3.disp(7,3);
+    }
+}
